@@ -1,16 +1,59 @@
+# C# Data Types and Type Casting
 
-#### **CSharp.md** 🏆  
-```markdown
-# Type Casting in C#
+## 1. Getting the Data Type in C#
 
-## Implicit Casting (Widening Conversion)  
-C# automatically converts smaller types into larger ones:
+In C#, you can use the `.GetType()` method to find out the data type of a variable.
+
 ```csharp
-int num = 10;
-double result = num;  // Implicit casting from int to double
-Console.WriteLine(result);  // Output: 10.0
+int x = 5;
+Console.WriteLine(x.GetType()); // Output: System.Int32
 
-### Explicit typecasting
-double num = 10.5;
-int converted = (int) num;  // Explicit cast from double to int
-Console.WriteLine(converted);  // Output: 10
+string y = "Hello";
+Console.WriteLine(y.GetType()); // Output: System.String
+```
+
+---
+
+## 2. Type Casting in C#
+
+### ✅ Implicit Casting (Widening Conversion)
+
+C# automatically converts a smaller type to a larger type.
+
+```csharp
+int x = 5;
+double y = x;  // Implicit casting from int to double
+
+Console.WriteLine(y); // Output: 5.0
+```
+
+### 🛠️ Explicit Casting (Narrowing Conversion)
+
+You must explicitly cast a larger type to a smaller type.
+
+```csharp
+double num = 10.99;
+int converted = (int)num;  // Explicit casting from double to int
+
+Console.WriteLine(converted); // Output: 10
+```
+
+---
+
+## 3. 🧪 Common Type Conversion Methods
+
+| Conversion               | Example                            | Notes                                      |
+|--------------------------|------------------------------------|--------------------------------------------|
+| `int` to `double`        | `double d = 10;`                   | Implicit                                   |
+| `double` to `int`        | `int i = (int)5.7;`                | Explicit (truncates value)                 |
+| `string` to `int`        | `int n = int.Parse("123");`        | Throws exception if string is invalid      |
+| `int` to `string`        | `string s = 123.ToString();`       | Common for output                          |
+| `string` to `double`     | `double d = double.Parse("3.14");` | Use `TryParse` to avoid exceptions         |
+
+---
+
+## Notes
+
+- Use `TryParse()` to safely convert strings to numeric types without throwing exceptions.
+- C# is statically typed: the type of a variable is known at compile time.
+- `var` infers the type at compile time, but does not make C# dynamically typed.
