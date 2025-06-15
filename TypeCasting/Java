@@ -1,12 +1,60 @@
-# Type Casting in Java
+# Java Data Types and Type Casting
 
-## Implicit Casting (Widening Conversion)  
-Java automatically converts smaller types into larger types:
+## 1. Getting the Data Type in Java
+
+In Java, you determine the data type of a variable by declaring it explicitly. To check or print the type at runtime, you can use `.getClass().getName()` for reference types (like `String`, `Integer`, etc.).
+
 ```java
-int num = 10;
-double result = num;  // Implicit widening conversion
-System.out.println(result);  // Output: 10.0
-## Explicit typecasting
-double num = 10.5;
-int converted = (int) num;  // Converts double to int, dropping decimals
-System.out.println(converted);  // Output: 10
+int x = 5;
+System.out.println(((Object)x).getClass().getName()); // Output: java.lang.Integer (autoboxed)
+
+String y = "Hello";
+System.out.println(y.getClass().getName()); // Output: java.lang.String
+```
+
+> Note: For primitive types (`int`, `double`, etc.), Java does not directly provide runtime type reflection. You often use wrapper classes for such purposes.
+
+---
+
+## 2. Type Casting in Java
+
+### ✅ Implicit Casting (Widening)
+
+Java automatically casts a smaller type to a larger type size (e.g., `int` to `double`).
+
+```java
+int x = 5;
+double y = x; // Implicit casting from int to double
+
+System.out.println(y); // Output: 5.0
+```
+
+### 🛠️ Explicit Casting (Narrowing)
+
+You must explicitly cast a larger type to a smaller type size.
+
+```java
+double num = 10.99;
+int converted = (int) num; // Explicit casting from double to int
+
+System.out.println(converted); // Output: 10
+```
+
+---
+
+## 3. 🧪 Common Type Conversion Methods
+
+| Conversion             | Example                          | Notes                                      |
+|------------------------|----------------------------------|--------------------------------------------|
+| `int` to `double`      | `double d = 10;`                 | Implicit casting                           |
+| `double` to `int`      | `int i = (int) 5.7;`             | Explicit casting (truncates value)         |
+| `String` to `int`      | `Integer.parseInt("123")`        | Throws `NumberFormatException` if invalid  |
+| `int` to `String`      | `String.valueOf(123)`            | Also `Integer.toString(123)`               |
+| `String` to `double`   | `Double.parseDouble("3.14")`     | Similar to integer parsing                 |
+
+---
+
+## Notes
+
+- Java is statically typed: types must be known at compile time.
+- Casting from objects (e.g., `Object`) often requires checking the type with `instanceof`.
