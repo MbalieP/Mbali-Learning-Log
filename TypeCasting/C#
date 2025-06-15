@@ -1,0 +1,16 @@
+
+#### **CSharp.md** 🏆  
+```markdown
+# Type Casting in C#
+
+## Implicit Casting (Widening Conversion)  
+C# automatically converts smaller types into larger ones:
+```csharp
+int num = 10;
+double result = num;  // Implicit casting from int to double
+Console.WriteLine(result);  // Output: 10.0
+
+### Explicit typecasting
+double num = 10.5;
+int converted = (int) num;  // Explicit cast from double to int
+Console.WriteLine(converted);  // Output: 10
