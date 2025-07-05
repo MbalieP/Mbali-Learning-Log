@@ -1,4 +1,5 @@
 class Animal:
+    
     def speak(self):
         print("The animal makes a sound.")
 
