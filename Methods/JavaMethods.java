@@ -43,6 +43,7 @@ public class JavaMethods {
         Calculator calc = new Calculator();
         System.out.println(calc.add(5, 10));
         System.out.println(calc.add(5.5, 4.5));
+        
         // object
         Person p = new Person();
         p.setName("Mbali");
