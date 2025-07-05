@@ -24,7 +24,7 @@ class Person:
     def name(self, value):
         self._name = value
 
-# Usage
+# exampe Usage
 if __name__ == "__main__":
     dog = Dog()
     dog.speak()
