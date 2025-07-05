@@ -9,6 +9,7 @@ public class Arrays {
     }
 }
 public class MultiDimensionalArrays {
+    
     public static void main(String[] args) {
         int[][] matrix = {
             {1, 2, 3},
