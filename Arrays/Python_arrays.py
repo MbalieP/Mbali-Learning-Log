@@ -1,5 +1,5 @@
 # Single-dimensional array
-numbers = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5, 6]
 print("Python 1D Array:", numbers)
 
 # Access elements
