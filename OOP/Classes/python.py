@@ -35,6 +35,7 @@ class Dog:
             return 21 + (self.age - 2) * 4
 
 # Creating an instance of the Dog class
+
 my_dog = Dog("Buddy", 3)
 
 # Accessing attributes
