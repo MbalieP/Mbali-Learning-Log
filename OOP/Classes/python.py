@@ -5,6 +5,7 @@
 
 class Dog:
     # Class attribute
+    
     species = "Canis lupus familiaris"  # This is shared by all instances
 
     def __init__(self, name, age):
@@ -47,4 +48,4 @@ print(my_dog.bark())  # Output: Buddy says Woof!
 print(f"My dog's age in human years is {my_dog.get_human_age()} years.")  # Output: My dog's age in human years is 25 years.
 
 # Demonstrating class attribute
-print(f"All dogs belong to the species: {my_dog.species}")  # Output: All dogs belong to the species: Canis lupus familiaris
+print(f"All dogs belong to the species: {my_dog.species}")  # Output:All dogs belong to the species: Canis lupus familiaris
