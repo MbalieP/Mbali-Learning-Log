@@ -1,4 +1,4 @@
-# Mbali-Learning-Log 🚀📖  
+# Mbali-Learning-Log  
 
 ## About This Repository  
 Welcome to **Mbali-Learning-Log**, my personal learning journal where I explore programming languages, frameworks, and development concepts.  
